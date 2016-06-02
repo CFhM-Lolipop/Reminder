@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reminder", "reminder\reminder.csproj", "{7FB7DBEB-6FA1-41C5-B0E0-EA4CFADD72A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariousCool", "VariousCool\VariousCool.csproj", "{ACAFFD1A-C07F-44FA-8E42-DA04E9C8FFCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialDesignColors.Wpf", "..\MaterialDesignInXamlToolkit-master\MaterialDesignColors.Wpf\MaterialDesignColors.Wpf.csproj", "{90B53209-C60C-4655-B28D-A1B3E1044BA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialDesignThemes.Wpf", "..\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.Wpf\MaterialDesignThemes.Wpf.csproj", "{F079FB0A-A8ED-4216-B6A5-345756751A04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AppVeyor|Any CPU = AppVeyor|Any CPU
+		AppVeyor|x64 = AppVeyor|x64
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FB7DBEB-6FA1-41C5-B0E0-EA4CFADD72A6}.AppVeyor|Any CPU.ActiveCfg = Release|Any CPU
+		{7FB7DBEB-6FA1-41C5-B0E0-EA4CFADD72A6}.AppVeyor|Any CPU.Build.0 = Release|Any CPU
+		{7FB7DBEB-6FA1-41C5-B0E0-EA4CFADD72A6}.AppVeyor|x64.ActiveCfg = Release|x64
+		{7FB7DBEB-6FA1-41C5-B0E0-EA4CFADD72A6}.AppVeyor|x64.Build.0 = Release|x64
+		{7FB7DBEB-6FA1-41C5-B0E0-EA4CFADD72A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FB7DBEB-6FA1-41C5-B0E0-EA4CFADD72A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FB7DBEB-6FA1-41C5-B0E0-EA4CFADD72A6}.Debug|x64.ActiveCfg = Debug|x64
+		{7FB7DBEB-6FA1-41C5-B0E0-EA4CFADD72A6}.Debug|x64.Build.0 = Debug|x64
+		{7FB7DBEB-6FA1-41C5-B0E0-EA4CFADD72A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FB7DBEB-6FA1-41C5-B0E0-EA4CFADD72A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FB7DBEB-6FA1-41C5-B0E0-EA4CFADD72A6}.Release|x64.ActiveCfg = Release|x64
+		{7FB7DBEB-6FA1-41C5-B0E0-EA4CFADD72A6}.Release|x64.Build.0 = Release|x64
+		{ACAFFD1A-C07F-44FA-8E42-DA04E9C8FFCC}.AppVeyor|Any CPU.ActiveCfg = Release|Any CPU
+		{ACAFFD1A-C07F-44FA-8E42-DA04E9C8FFCC}.AppVeyor|Any CPU.Build.0 = Release|Any CPU
+		{ACAFFD1A-C07F-44FA-8E42-DA04E9C8FFCC}.AppVeyor|x64.ActiveCfg = Release|x64
+		{ACAFFD1A-C07F-44FA-8E42-DA04E9C8FFCC}.AppVeyor|x64.Build.0 = Release|x64
+		{ACAFFD1A-C07F-44FA-8E42-DA04E9C8FFCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACAFFD1A-C07F-44FA-8E42-DA04E9C8FFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACAFFD1A-C07F-44FA-8E42-DA04E9C8FFCC}.Debug|x64.ActiveCfg = Debug|x64
+		{ACAFFD1A-C07F-44FA-8E42-DA04E9C8FFCC}.Debug|x64.Build.0 = Debug|x64
+		{ACAFFD1A-C07F-44FA-8E42-DA04E9C8FFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACAFFD1A-C07F-44FA-8E42-DA04E9C8FFCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACAFFD1A-C07F-44FA-8E42-DA04E9C8FFCC}.Release|x64.ActiveCfg = Release|x64
+		{ACAFFD1A-C07F-44FA-8E42-DA04E9C8FFCC}.Release|x64.Build.0 = Release|x64
+		{90B53209-C60C-4655-B28D-A1B3E1044BA3}.AppVeyor|Any CPU.ActiveCfg = AppVeyor|Any CPU
+		{90B53209-C60C-4655-B28D-A1B3E1044BA3}.AppVeyor|Any CPU.Build.0 = AppVeyor|Any CPU
+		{90B53209-C60C-4655-B28D-A1B3E1044BA3}.AppVeyor|x64.ActiveCfg = AppVeyor|x64
+		{90B53209-C60C-4655-B28D-A1B3E1044BA3}.AppVeyor|x64.Build.0 = AppVeyor|x64
+		{90B53209-C60C-4655-B28D-A1B3E1044BA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90B53209-C60C-4655-B28D-A1B3E1044BA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90B53209-C60C-4655-B28D-A1B3E1044BA3}.Debug|x64.ActiveCfg = Debug|x64
+		{90B53209-C60C-4655-B28D-A1B3E1044BA3}.Debug|x64.Build.0 = Debug|x64
+		{90B53209-C60C-4655-B28D-A1B3E1044BA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90B53209-C60C-4655-B28D-A1B3E1044BA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90B53209-C60C-4655-B28D-A1B3E1044BA3}.Release|x64.ActiveCfg = Release|x64
+		{90B53209-C60C-4655-B28D-A1B3E1044BA3}.Release|x64.Build.0 = Release|x64
+		{F079FB0A-A8ED-4216-B6A5-345756751A04}.AppVeyor|Any CPU.ActiveCfg = AppVeyor|Any CPU
+		{F079FB0A-A8ED-4216-B6A5-345756751A04}.AppVeyor|Any CPU.Build.0 = AppVeyor|Any CPU
+		{F079FB0A-A8ED-4216-B6A5-345756751A04}.AppVeyor|x64.ActiveCfg = AppVeyor|x64
+		{F079FB0A-A8ED-4216-B6A5-345756751A04}.AppVeyor|x64.Build.0 = AppVeyor|x64
+		{F079FB0A-A8ED-4216-B6A5-345756751A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F079FB0A-A8ED-4216-B6A5-345756751A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F079FB0A-A8ED-4216-B6A5-345756751A04}.Debug|x64.ActiveCfg = Debug|x64
+		{F079FB0A-A8ED-4216-B6A5-345756751A04}.Debug|x64.Build.0 = Debug|x64
+		{F079FB0A-A8ED-4216-B6A5-345756751A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F079FB0A-A8ED-4216-B6A5-345756751A04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F079FB0A-A8ED-4216-B6A5-345756751A04}.Release|x64.ActiveCfg = Release|x64
+		{F079FB0A-A8ED-4216-B6A5-345756751A04}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

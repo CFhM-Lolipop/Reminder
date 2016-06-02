@@ -1,0 +1,116 @@
+﻿<Window x:Class="reminder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:reminder"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" ResizeMode="NoResize"  AllowsTransparency="True" 
+        WindowStyle="None" Background="Transparent" Icon="1416798899507.png">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ListBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.RadioButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <local:ArrayToArrayConverter x:Key="MultiConverter"/>
+
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="276*"/>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="390*"/>
+            <ColumnDefinition Width="117*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <!--leftTransparentcy-->
+        <Grid Grid.RowSpan="4">
+            <Grid.Background>
+                <ImageBrush ImageSource="trans.png"/>
+            </Grid.Background>
+        </Grid>
+        <Grid Grid.Column="1" Background="#DFF7F7F7" Grid.ColumnSpan="4" Grid.RowSpan="4" ></Grid>
+        <!--textbox-->
+        <Grid Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2">
+            <ListView Name="listview" ItemsSource="{Binding Tips}" Background="Transparent" BorderBrush="{x:Null}" >
+                
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListViewItem}">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                    <Border Name="BD_Collector" Background="Transparent" Margin="0">
+                                        <Grid>
+                                            <local:ff_tag x:Name="mtag" BindedTip="{Binding}" TipBackground="#CC79DCC1">
+                                            </local:ff_tag>
+                                            <Button Name="delbtn"
+                                                    Visibility="Collapsed"
+                                                    Background="#fc3737" Content="-" FontSize="26" FontWeight="Bold" Foreground="#fff"
+                                                    BorderThickness="0" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                                                    Style="{StaticResource MaterialDesignFloatingActionMiniButton}" 
+                                                    Command="{Binding ElementName=listview, Path=DataContext.RemoveSingleItemCommand}">
+                                                <Button.CommandParameter>
+                                                    <MultiBinding Converter="{StaticResource MultiConverter}">
+                                                        <Binding />
+                                                        <Binding ElementName="listview" Path="DataContext" Mode="OneWay"/>
+                                                    </MultiBinding>
+                                                </Button.CommandParameter>
+                                            </Button>
+                                        </Grid>
+                                        
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="mtag" Property="TipBackground" Value="#CCB6F13C" />
+                                            <Setter TargetName="delbtn" Property="Visibility" Value="Visible"/>
+                                        </Trigger>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="mtag" Property="TipBackground" Value="#CC00AC00" />
+                                            <Setter TargetName="delbtn" Property="Visibility" Value="Visible"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+        </Grid>
+
+        <Grid Grid.Column="2" Grid.Row="2">
+            <TextBox Name="inputbox" 
+                     Background="White" 
+                     FontFamily="MicrosoftYaHei Light" 
+                     FontSize="18"
+                     Width="250" Height="60"
+                     Text="{Binding TextboxText, Mode=TwoWay}"
+                     AcceptsReturn="True"/>
+        </Grid>
+        <!--addbutton-->
+        <Grid Grid.Column="3" Grid.Row="2">
+            <Button 
+                Name="add" Background="#fc3737" Content="+" FontSize="50" FontWeight="Light" Foreground="#fff" 
+                Width="70" Height="70" BorderThickness="0" 
+                Style="{StaticResource MaterialDesignFloatingActionAccentButton}" 
+                Command="{Binding AddTagCommand}" 
+                CommandParameter="{Binding}"
+                />
+        </Grid>
+    </Grid>
+
+</Window>
